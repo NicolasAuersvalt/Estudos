@@ -1,0 +1,48 @@
+
+"""
+Mapas -> Em python, conhecido como Dicionário
+"""
+
+"""
+receita = {"Pacote de Bolacha" : 2, "Nata" : 1, "Doce de Leite" : 2, "Banana" : 8}
+
+for igrediente in receita: # Printa o nome dos igredientes
+    print(igrediente)
+
+
+for quantidade in receita:
+    print(receita[quantidade])  # Printa os igredientes e a quantidade deles
+
+print("{}{}".format(igrediente, receita[quantidade]))"""
+
+
+receita = {"Pacote de Bolacha" : 2, "Nata" : 1, "Doce de Leite" : 2, "Banana" : 8}
+
+print(receita.keys()) # .keys -> Retorna um dicionário de chaves (CASO EU NÃO SAIBA UMA CHAVE)
+
+"""for igrediente in receita.keys(): # MODO RECOMENDADO (PYTÔNICO)
+    print(receita[igrediente])"""
+
+# Acessando Valores IMPORTANTÍSSIMO!!!!!!!!!!!!!!!
+
+"""
+print(receita.values()) # dict_values([2, 1, 2, 8])
+
+# Então na lógica, se eu quiser saber o valor mais fácil e PYTÔNICO
+
+for value in receita.values():
+    print(value) # Retorna todos os valores da receita
+
+# E se eu quiser saber a chave e o valor de um dicionário facilmente? IMPORTANTÍSSIMO TAMBÉM
+
+for chave, valor in receita.items():
+    print(chave, valor) # MODO PYTÔNICO
+"""
+
+
+# Soma, Valor Máximo, Valor Mínimo, Tamanho (Atenção, funciona apenas se as chaves forem INT or FLOAT)
+
+print(sum(receita.values()))
+print(max(receita.values()))
+print(min(receita.values()))
+print(len(receita))
