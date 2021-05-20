@@ -1,0 +1,50 @@
+from collections import Counter
+"""
+Module Collections - Counter (Contador)
+
+Collections -> High Performance Container DataTypes
+
+Container -> Dict, Tuple, List -> Podemos guardar coisas dentro deles
+
+Counter -> Recebe um iterável como parâmetro e cria um objeto do tipo Collections Counter...
+
+...Parecido com um Dicionário, contendo como chave o elemento da lista passada como parâmetro e como valor...
+
+...A quantidade de acontecimentos desse evento
+"""
+"""
+from collections import Counter
+
+# Utilização
+
+# Vamos utilizar algo, sla, lista ou qualquer iterável
+lista = [1, 1, 2, 3, 4, 4, 4, 4, 5, 5 ]
+
+resultado = Counter(lista) # Counter({4: 4, 1: 2, 5: 2, 2: 1, 3: 1})
+
+print(type(resultado)) # <class 'collections.Counter'>
+
+print(resultado) # Para o elemento 4, eu encontrei 4 ocorrências...
+
+# Viu? Para cada elemento da lista ele criou uma *chave* para cada elemento e colocou a quantidade de ocorrências como *valor* 
+"""
+"""
+from collections import Counter
+
+print(Counter("Nícolas Fodão"))
+# Counter({'o': 3, 'N': 1, 'í': 1, 'c': 1, 'l': 1, 'a': 1, 's': 1, ' ': 1, '
+
+# Poderíamos utilizar para fazer contagem de caracteres em um texto digitado
+"""
+texto = """Shrek é amor; Shrek é vida. Meu pai zombou de mim e me chamou de viadinho, mas eu sabia que tudo isso era inveja da minha devoção por shrek. Chamei ele de Cuzão, então ele me deu um tapão e me mandou dormir. Estou triste e chorando, e minha cara dói para caralho, é muito frio e não tenho ninguém para me consolar. Sinto algo vindo em minha direção. Então algo me toca. É O SHREK!! Tô felizão, ele sussura em meu ouvido: "Este é o meu pântano". Ele me agarra com suas mão de ogro, me coloca de quatro na cama. Estou Pronto, abro minhas pernas para facilitar a sua penetração. Ele penetra em minha bunda. Dói para caralho, mas não tem problema, faço tudo por Shrek, minha bunda dói e meus olhos começam a lacrimejar. Eu me oponho contra a sua força, quero satisfazer Shrek. Ele Urra com toda a sua força, demonstrando seu amor, um amor nunca sentido. Meu pai entra no meu quarto. Shrek olha em seus olhos e diz: Está tudo acabado. Shrek sai voando pela minha janela. Shrek é amor; Shrek é vida"""
+
+palavras = texto.split()
+#print(palavras) # Separa cada palavrinha com ""
+
+res = Counter(palavras)
+
+print(res)
+
+# As cinco palavras que mais se repetem em um livro
+
+print(res.most_common(5)) # Encontrando as cinco palavras com mais ocorrência no texto
