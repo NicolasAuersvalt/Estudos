@@ -1,0 +1,181 @@
+"""
+- Mesmo que os conjuntos da matemática
+
+Chamados de Sets.
+
+NÃO POSSUEM VALORES DUPLICADOS;
+NÃO POSSUEM VALORES ORDENADOS;
+Elementos não são acessados via [índice], ou seja, não sao indexados;
+
+
+->>> São bons quando quando precisamos armazenar elementos mas não nos importamos com a ordenação.
+E não precisamos de chaves, valores e elementos duplicados
+
+São referenciados com {chaves}
+
+Diferença entre Sets e Dictionary:
+    - Chave valor
+    - Sets têm apenas valor
+"""
+"""
+# Forma 1
+
+s = set({1, 2, 3, 4, 5, 6, 7, 2, 3}) # Valor duplicado é ignorado!!
+
+print(type(s))
+print(s)
+
+# Forma 2 - Common
+
+conj = {1, 2, 3, 4, 5, 1}
+
+print(conj)
+
+
+if 3 in conj:
+    print("Tem o 3!!")
+else:
+    print("Não tem o 3")"""
+
+"""
+s = {1, 2, 3, 4, 5, 6, 7, 1} # Temos 6 elementos no conjunto
+# A ordem do Conjunto é toda diferente, não é igual a salva pelo usuário!!!!!!!!!!!!!!!!
+
+tuple = (1, 2, 3, 4, 5, 6, 7, 1) # Temos 6 elementos na tupla
+
+print(s, len(s)) # Retorna apenas 7 elementos (todos elementos - repetições)
+print(tuple, len(tuple)) # Retorna todos os elementos
+
+
+# Podemos colocar qualquer tipo de dado misturado em SETS
+"""
+"""
+# Usos:
+
+# Imagine que fizemos um formulário de cadastro de visitantes em um museu.
+# Os visitantes informam de onde vieram
+
+# Adicionaremos as cidades em uma lista, já que podemos ter elementos repetidos
+
+# Ex: Eu vim de São Paulo pro Museu do Holoscausto em Curitiba
+
+cidades = ["São Paulo", "Rio Grande do Sul", "Santa Catarina", "São Paulo"]
+
+print(len(cidades)) # Temos 4 cidades
+
+# Mas e as cidades distintas?
+
+print(len(set(cidades))) # set() -> Eu transformo o cujo parâmetro em conjuntos, ou seja, sem repetições
+# Retorna 3 cidades (Total - Repetida)"""
+"""
+# ====/====/====/====/====/====/====/====/====/====/====/====/
+
+# Adicionando Elementos em um Conjunto
+
+s = {1, 2, 3, 4}
+
+s.add(5) # Diferentemente das Tuplas(Imutáveis), os Sets são mutáveis!
+print(s)
+
+# Duplicidade é ignorado: s.add(1)
+
+# ====/====/====/====/====/====/====/====/====/====/====/====/
+
+# Remover elementos em um conjunto
+
+# Forma 1
+
+set = {1, 2, 3, 4}
+
+s.remove(3) # NÃO É ÍNDICE!!!!!! É o Valor a ser removido
+
+print(s) # Tendeu?
+
+# Forma 2
+
+s.discard(2) # Para discard(), se nenhum valor for encontrado, nenhum erro é gerado
+print(s)
+"""
+"""
+# ====/====/====/====/====/====/====/====/====/
+
+# Copiando um set para o outro
+
+set = {1, 2, 3}
+novo = set.copy()
+
+print(novo) #DeepCopy cria dois elementos distintos no python
+
+# ShallowCopy
+
+new = set
+new.add(4) # Este bonitão modifica não somente a new como a set também, tipo colocar açúcar no café
+# Ele vai alocar espaço na memória e copia pro café todo, não somente pro topo do café
+
+print(new)
+
+
+# Podemos remover todos os itens de um conjunto
+
+set.clear()
+print(set)"""
+
+"""# Metódos Matemáticos de Conjuntos
+
+# Imagine que temos dois estudantes: Um de Java e o outro de Python
+
+estudante_java = {"Marcos", "João", "Pedro", "Caraio"}
+estudante_python = {"Fernando", "Nícolas", "Vanessa", "Caraio"}
+
+# Veja que temos estudante de python que estuda nos dois cursos
+
+# Forma 1 - Union (União entre dois conjuntos) # Recomendado
+
+unicos1= estudante_python.union(estudante_java)
+print(unicos1) # Fez a União entre o que tem em um e o que não tem no outro
+
+# Forma 2 - Utilizando o caractere pipe | # às vezes a pessoa não entende o que significa o |
+
+unicos2 = estudante_python | estudante_java
+print(unicos2)
+"""
+"""
+# Gerar um conjunto conjunto de estudantes que estão em ambos os cursos
+
+# Forma 1 - Intersection
+
+estudante_java = {"Marcos", "João", "Pedro", "Caraio"}
+estudante_python = {"Fernando", "Nícolas", "Vanessa", "Caraio"}
+
+inter = estudante_python.intersection(estudante_java)
+
+print(inter)
+
+# Forma 2 - &
+
+inter1 = estudante_python & estudante_java
+
+print(inter1)
+
+
+# Gerar um conjunto de estudantes de um curso que não estão em outro
+
+estudante_java = {"Marcos", "João", "Pedro", "Caraio"}
+estudante_python = {"Fernando", "Nícolas", "Vanessa", "Caraio"}
+
+python = estudante_python.difference(estudante_java)
+java = estudante_java.difference(estudante_python)
+
+print(python)
+print(java)
+"""
+
+
+# Soma, Sum, Max, Min
+
+int = {1, 2, 3, 4, 5}
+
+print(sum(int))
+print(min(int))
+print(max(int))
+print(len(int))
