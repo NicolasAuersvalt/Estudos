@@ -1,0 +1,13 @@
+"""
+Tipo None é um sem_tipo, ou seja, um tipo vazio, mas o mais apropriado de chamá-lo é SEM_TIPO
+
+
+Certo: None
+
+Errado: none
+
+- Podemos utilizar para ele retornar None ANTES de receber um valor
+
+- O tipo none sempre é considerado FALSE
+
+"""
