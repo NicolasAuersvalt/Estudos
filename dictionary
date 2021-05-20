@@ -1,0 +1,148 @@
+"""
+In Others programming languages, Dictionaries are calling by MAPS
+
+
+Key / Value
+
+Lista [1, 2, 3]
+Tupla (1, 2, 3)
+
+Ambas eu posso acessá-las, mas é inplicito
+
+Já nos dicionários é explícito (Chave / Valor)
+
+print(type({})) -> retona <class 'dict'>
+
+- Dicionários podem receber qualquer tipo para chave (Int, Float, Bool, Str)
+- Podemos Misturar também
+
+# Forma 1 (RECOMMENDED)
+
+paises = {"Ford" : "Fiesta", "Toyota" : "Etios"}
+
+print(paises)
+
+# Forma 2
+
+paises2 = dict(ford="Fiesta", Toyota="Etios")
+
+print(paises2)
+"""
+# Acessando elementos
+"""
+# 1 -> Acessando via chave, da mesma forma que lista/tupla (nestes é o [índice])
+
+carros = {"Ford" : "Fiesta", "Toyota" : "Etios"}
+
+print(carros["Ford"])
+
+
+# 2 -> Acessando da forma recomendada
+
+print(carros.get("Ford"))
+
+Carrao = carros.get("Toyota")
+
+if Carrao: #Pegue a Variavel Hilux, se tiver o Toyota, diga que tem no estoque, senão diga Não disponível
+    print(f"Tem no estoque o {Carrao}")
+else:
+    print("Não Disponível")
+    
+# Para evitar o If, vamos fazer o seguinte:    
+    
+carros = {"Ford" : "Fiesta", "Toyota" : "Etios"}
+
+carro = carros.get('Hilux', 'Não encontrado') #Pega o carro com a chave Hilux, se não encontrar, coloca esse valor no lugar
+
+print("Encontrei o carro {}".format(carro))
+
+- Neste caso, se não for encontrado a chave Hilux, será atribuida (por falta de valor = None) o valor.
+"""
+
+"""
+Notebooks = {"Dell" : "I7", "Samsung": "I3"," Acer": "I9"}
+
+print("Dell" in Notebooks) # True
+print("Hp" in Notebooks) # False
+print("I3" in Notebooks) # I3 é um VALOR, não uma chave -> False
+"""
+
+"""
+Processadores = {
+    (2.40):"GHz",
+    (3.30):"GHz",
+    (2.90):"GHz",
+},
+
+print(Processadores)
+print(type(Processadores)) # -> <class 'tuple'>"""
+
+# Selecione todas as linhas e digite 3 vezes aspas duplas
+
+
+
+
+# Adicionar Elemenetos
+Notebooks = {"I3" : "2.90 GHz", "I5" : "1.90 GHz"}
+
+# Forma 1 -> Mais comum
+
+Notebooks["I9"] = "3.90 GHz"
+
+print("Antes: {}".format(Notebooks))
+# Forma 2
+
+novo_dado = {"Ryzen 3": "4.10 GHz"}
+Notebooks.update(novo_dado) # Eu posso usar tanto para adicionar como para atualizar
+
+print("Depois: {}".format(Notebooks))
+
+
+# Conclusão: A forma de adicionar ou atualizar elementos em um dicionários é o mesmo (.update)
+
+# Conclusão 2: Em dicionários, não podemos ter chaves repetidas (se não ele será atualizado, substituído)
+
+
+# Remover dados de um dicionário
+
+receita = {"Pacote de Bolacha" : 2, "Nata" : 1, "Doce de Leite" : 2, "Banana" : 8}
+"""
+print(receita)
+
+receita_incompleta = receita.pop("Banana") # .pop vai Remover "Banana" e retornar o valor de Banana
+
+print(receita_incompleta)
+"""
+"""
+# Segunda Forma
+
+
+del receita["Banana"] # {'Pacote de Bolacha': 2, 'Nata': 1, 'Doce de Leite': 2}
+print(receita)
+
+# Neste caso não retorna um valor"""
+
+
+# Métodos de Dicionário
+
+d = dict(a=1, b=2, c=3)
+
+print(d)
+
+"""
+# Limpando Dicionários
+
+d.clear()
+"""
+# Copiando Dicionário
+
+"""
+novo_d = d.copy() # Copia
+novo_d.update(a=9) # Atualizando Valor
+
+print(novo_d)
+
+# Forma 2 - Shallow Copy
+d["a"] = 9
+print(d)
+"""
