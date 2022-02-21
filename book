@@ -1,0 +1,64 @@
+"""
+import urllib.request
+
+page = urllib.request.urlopen("http://notpron.org/notpron/levelone.htm")
+text = page.read().decode("utf8")
+print(text)
+position = text.find("idea")
+important = text[int(position) - 1: int(position) + 10]
+print(important)
+
+data = open("/home/nicolas/teste.txt", 'r')
+def codigo_identificacao():
+    for line in data:
+        text = data.read()
+        codigo = text.find("#")
+        identificacao = text[int(codigo) + 1: int(codigo) + 4]
+        print(identificacao)
+    return
+
+codigo_identificacao()
+data.close()
+
+lista = open("/home/nicolas/resultados")
+
+names = []
+results = []
+
+for key in lista:
+    (name, result) = key.split()
+    names.append(name)
+    results.append(int(result))
+
+results.sort(reverse = True)
+names.sort(reverse = True)
+
+for num in range(0,10):
+    print(names[num], results[num])
+
+
+lista = open("/home/nicolas/resultados")
+
+results = {}
+
+for key in lista:
+    (name, result) = key.split()
+    results[result] = name
+
+lista.close()
+
+for keys in sorted(results.keys()):
+    print(results[keys] + " " + keys)
+
+    from typing import List
+
+dados = "Alan Ferreira Pereira 'alanzoka';18;Maethe;Gastronomia;1.000.000"
+s = {}
+
+(s["Name"], s["Idade"], s["Conjuge"], s["Formação"], s["Salário"]) = dados.split(";")
+print("Name: " + s["Name"])
+print("Idade: " + s["Idade"])
+print("Conjuge: " + s["Conjuge"])
+print("Formação: "+ s["Formação"])
+print("Salário: " + s["Salário"])
+"""
