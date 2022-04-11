@@ -1,0 +1,88 @@
+Kernel-EventTracing
+
+Cloud Files Diagnostic Event Listener
+
+- <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+- <System>
+  <Provider Name="Microsoft-Windows-Kernel-EventTracing" Guid="{b675ec37-bdb6-4648-bc92-f3fdc74d3ca2}" /> 
+  <EventID>2</EventID> 
+  <Version>0</Version> 
+  <Level>2</Level> 
+  <Task>2</Task> 
+  <Opcode>12</Opcode> 
+  <Keywords>0x8000000000000010</Keywords> 
+  <TimeCreated SystemTime="2022-02-26T00:47:55.4992003Z" /> 
+  <EventRecordID>135</EventRecordID> 
+  <Correlation /> 
+  <Execution ProcessID="4260" ThreadID="7708" /> 
+  <Channel>Microsoft-Windows-Kernel-EventTracing/Admin</Channel> 
+  <Computer>Nícolas-PC</Computer> 
+  <Security UserID="S-1-5-21-3079308348-2271204455-1683727224-1001" /> 
+  </System>
+- <EventData>
+  <Data Name="SessionName">Cloud Files Diagnostic Event Listener</Data> 
+  <Data Name="FileName" /> 
+  <Data Name="ErrorCode">3221225506</Data> 
+  <Data Name="LoggingMode">4194560</Data> 
+  <chmod>	
+  </EventData>
+  </Event>
+
+Kernel-EventTracing
+
+Cloud Files Diagnostic Event Listener
+- <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+- <System>
+  <Provider Name="Microsoft-Windows-Kernel-EventTracing" Guid="{b675ec37-bdb6-4648-bc92-f3fdc74d3ca2}" /> 
+  <EventID>2</EventID> 
+  <Version>0</Version> 
+  <Level>2</Level> 
+  <Task>2</Task> 
+  <Opcode>12</Opcode> 
+  <Keywords>0x8000000000000010</Keywords> 
+  <TimeCreated SystemTime="2022-02-25T21:52:55.2964471Z" /> 
+  <EventRecordID>134</EventRecordID> 
+  <Correlation /> 
+  <Execution ProcessID="5820" ThreadID="8248" /> 
+  <Channel>Microsoft-Windows-Kernel-EventTracing/Admin</Channel> 
+  <Computer>Nícolas-PC</Computer> 
+  <Security UserID="S-1-5-21-3079308348-2271204455-1683727224-1001" /> 
+  </System>
+- <EventData>
+  <Data Name="SessionName">Cloud Files Diagnostic Event Listener</Data> 
+  <Data Name="FileName" /> 
+  <Data Name="ErrorCode">3221225506</Data> 
+  <Data Name="LoggingMode">4194560</Data> 
+  </EventData>
+  </Event>
+
+Kernel-EventTracing
+
+Microsoft.Windows.Remediation
+
+- <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+- <System>
+  <Provider Name="Microsoft-Windows-Kernel-EventTracing" Guid="{b675ec37-bdb6-4648-bc92-f3fdc74d3ca2}" /> 
+  <EventID>2</EventID> 
+  <Version>0</Version> 
+  <Level>2</Level> 
+  <Task>2</Task> 
+  <Opcode>12</Opcode> 
+  <Keywords>0x8000000000000010</Keywords> 
+  <TimeCreated SystemTime="2022-02-25T21:52:48.2659378Z" /> 
+  <EventRecordID>133</EventRecordID> 
+  <Correlation /> 
+  <Execution ProcessID="7532" ThreadID="5532" /> 
+  <Channel>Microsoft-Windows-Kernel-EventTracing/Admin</Channel> 
+  <Computer>Nícolas-PC</Computer> 
+  <Security UserID="S-1-5-18" /> 
+  </System>
+- <EventData>
+  <Data Name="SessionName">Microsoft.Windows.Remediation</Data> 
+  <Data Name="FileName" /> 
+  <Data Name="ErrorCode">3221225525</Data> 
+  <Data Name="LoggingMode">268460034</Data> 
+  </EventData>
+  </Event>
+
+
