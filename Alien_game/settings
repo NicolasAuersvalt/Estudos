@@ -1,0 +1,8 @@
+"""
+
+
+"""
+
+class Settings():
+    def __init__(self):
+        self.screen_x, self.screen_y = 1280, 800
