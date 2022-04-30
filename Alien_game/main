@@ -1,0 +1,37 @@
+"""
+Invasão Alienígena
+
+Propostas: Antes de sair, salvar progresso
+"""
+import sys
+import pygame
+from ship import Ship
+from settings import Settings
+
+
+
+
+
+imagem = pygame.image.load(r'C:\Users\nicol\Desktop\Alien_game\bg_1.bmp')
+def run():
+    """
+    Para todo <py.game>, nós teremos uma relação de funções
+
+    .diplay - Vamos trabalhar com a Janela
+    .init() - Iniciaremos o programa
+
+    :return:
+    """
+    ship = Ship(screen)
+    pygame.init()
+    screen = pygame.display.set_mode((Settings().screen_x, Settings().screen_y)) # Define a escala da Janela, Settings().screenx -> Vem de settings.py
+    screen.blit(imagem, (0,0))
+    ship.blitme()
+    pygame.display.set_caption("Alien") # Define o Título
+    while True: # Inicia o laço principal do jogo
+        for event in pygame.event.get(): # Observa os eventos de Teclado e Mouse
+            if event.type == pygame.QUIT: # Observa o tipo de evendo se for fechar, fechará o jogo
+                sys.exit()
+            pygame.display.flip() # Deixa a tela mais recente visível
+
+run()
