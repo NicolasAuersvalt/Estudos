@@ -1,4 +1,3 @@
-# coding=utf-8
 """
 Invasão Alienígena
 
@@ -6,28 +5,46 @@ Propostas: Antes de sair, salvar progresso
 """
 import sys
 import pygame
-from ship import Ship
-from settings import Settings
+from ship import *
+from settings import *
+from song import Musicas
+from game_functions import *
+from bullet import *
+from pygame.sprite import Group
+
+musica_tocando = 0
+
 
 
 def run():
-    # Para todo <py.game>, nós teremos uma relação de funnest
-    # .diplay - Vamos trabalhar com a Janela
-    # .init() - Iniciaremos o programa
+    """
+    Para todo <py.game>, nós teremos uma relação de funções
 
+    .diplay - Vamos trabalhar com a Janela
+    .init() - Iniciaremos o programa
+
+    :return:
+    """
+
+    global musica_tocando
     pygame.init()
+    ai_settings = Settings()
     screen = pygame.display.set_mode((Settings().screen_x,
                                       Settings().screen_y))  # Define a escala da Janela, Settings().screenx -> Vem de settings.py
-    screen.blit(imagem, (0, 0))
     pygame.display.set_caption("Alien")  # Define o Título
-    ship = Ship(screen)
-    while True:  # Inicia o laço principal do jogo
-        for event in pygame.event.get():  # Observa os eventos de Teclado e Mouse
-            if event.type == pygame.QUIT:  # Observa o tipo de evendo se for fechar, fechará o jogo
-                sys.exit()
-            pygame.display.flip()  # Deixa a tela mais recente visível
-            ship.blitme()
+    ship = Ship(screen, ai_settings)
+    bullets = Group()
 
-imagem = pygame.image.load(r'/Users/admin/Desktop/space1.png')
+    if musica_tocando == 0:
+        pygame.mixer.music.load(Musicas().level1)
+        pygame.mixer.music.play()
+        musica_tocando = 1
+    while True:  # Inicia o laço principal do jogo
+        check_events(ai_settings, screen, ship, bullets)
+        bullets.update()
+        ship.update()
+        update_bullets(bullets)
+        update_screen(ai_settings, screen, ship, bullets)
+
 
 run()
