@@ -1,0 +1,34 @@
+#include <iostream>
+
+/* Io de IN e ON  */
+
+/* Inclui a biblioteca básica do C++ */
+
+using namespace std;
+
+/* namespace - organiza bibliotecas, posso incluir uma em um namespace */
+    /* e incluir outra em outro namespace */
+
+/* std -> Standard */
+
+int main (){
+    
+    /* void - Vazio */
+    
+    cout << "Hello World" << endl;
+
+    /* Cout - Print, << - Saida da tela */
+
+    /* endl - End Line, quebra de linha */
+
+    /* OU */
+
+    /* \n - quebra linha */
+
+    system("pause");
+
+    /* Gera uma pausa no programa, para não executar e fechar logo em seguida */
+
+
+    return 0;    
+}

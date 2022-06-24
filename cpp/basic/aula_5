@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+#define pi 3.141592
+
+#define hack cout << "systemctl\n";
+
+int main(){
+   
+   /*
+   int cartao
+   int numero
+   int validade
+   */
+
+   /* Para */
+
+   int cartao = 204, numero = 18482195, validade = 12012024;
+
+   /* ou */
+
+   /* int cartao; int numero; int validade;*/
+  
+   /* ou */
+
+   /* int cartao, numero, validade; */
+
+   cout << "O valor de pi é " << pi << ".\n";
+   hack;
+    
+   return 0;
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+   int num = 10;
+
+   cout << num << "\n\n";
+
+   /* Invertendo valores */
+
+   /* num = num * -1; */
+
+   /* ou */
+
+   /* num = -num */
+      /* Porém, ele não grava -num na variável num */
+
+   return 0;
+}

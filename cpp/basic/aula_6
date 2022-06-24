@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int n1 = 1;
+int n2 = 2;
+
+int main(){
+    /* Variáveis Locais e Globais */
+
+    int res = n1 + n2;
+
+    cout << res;
+
+    return 0;
+}

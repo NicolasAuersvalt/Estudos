@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+int i;
+
+int main(){
+    /* Arrays */
+
+    /* Declaro o tamanho do vetor */
+    int array_length = 10;
+    string obras[array_length];
+
+    /* Tipo nome[tamanho] */
+
+    /* Depois atribuo valores às posições */
+
+    obras[2] = "Ponte";
+    cout << obras[2] << obras;
+
+    obras[1] = "Prédio";
+    cout << obras[1];
+
+    for(i=0; i < array_length; i++){
+        /* for (primeira posição; domínio validade; somatória) */
+        cout << obras[i] << "\n";
+    }
+    return 0;
+
+    /* Ou posso fazer assim */
+
+    /* 
+    
+    sizeof[vetor] - Tamanho do vetor em BYTES
+
+    se Int, então temos 4 bytes
+
+    um vetor com posições terá, no total, 40 bytes
+
+    pois 4 bytes * 10 posições = 40
+
+    então para continuar com o valor original
+
+    basta nós dividirmos pela quantidade de bytes de um tipo de dado
+
+    então 40 / 4 = 10
+
+    então manteremos o valor original.
+    
+    */
+
+   for(i=0; i < sizeof(obras); i++){
+        cout << obras[i];
+   }
+}

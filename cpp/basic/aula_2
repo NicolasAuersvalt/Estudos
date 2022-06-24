@@ -1,0 +1,70 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   
+   /* Tipo Nome; */
+
+   /* Tipo Nome = Valor */
+
+   int life = 10;
+
+   char letra = 'B';
+
+   double decimal = 5.22222;
+
+   float decimal1 = 5.2;
+
+   bool vivo = true; 
+
+   string nome = "Nícolas";
+
+   /* char - Caractere (1 byte, ou seja, uma letra) "N" */
+      /* Caso queira colocar texto, char letras[20]; */
+      /* [20] - agora passa a ser um vetor. Texto até 20 caracteres
+
+   /* double - Decimal mais preciso (2.444444) */
+   
+   /* float - Decimal, menos preciso (2.4) */
+   
+   /* bool - True or False */ 
+
+   /* string - Recebe um texto "Nícolas") */
+   
+
+   /* Imprimindo */
+
+   cout << "Você tem " << life << " vidas.\n";;
+
+   cout << "Letra " << letra << " escolhida! \n";
+
+   cout << "Valor preciso " << decimal << ".\n";
+
+   cout << "Valor Aproximado " << decimal1 << ".\n";
+
+   cout << vivo;
+
+   /* Podemos resumir a */ 
+   
+   /* cout << "Você tem " << life << " vidas.\n" << "Letra " << letra << " escolhida! \n" << "Valor preciso " << decimal << ".\n";cout << "Valor Aproximado " << decimal1 << ".\n" << cout << vivo; */
+
+   /* Inserir valores do Teclado */
+
+   int cartao;
+   cout << "Digite o número do seu cartão: ";
+   cin >> cartao;
+
+   /* cin >> - input da vida atribuída à vidas*/ 
+
+   string name;
+   cout << "Digite o seu nome: ";
+   cin >> name;
+
+   int data;
+   cout << "Digite a Data de Validade: ";
+   cin >> data;
+
+   cout << "Olá, senhor(a) " << name << ", seu cartão é" << cartao << " com validade em " << data;
+   return 0;
+}

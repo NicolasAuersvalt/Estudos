@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int num = 10;
+char opc = 's';
+
+int main()
+{
+
+    if (num > 10)
+    {
+        cout << "Número > 10!";
+    }
+    else if (num < 0)
+    {
+        cout << "Número < 0!";
+    }
+    else if (0 < num < 10)
+    {
+        cout << "UNDERTALE";
+    }
+    return 0;
+
+    cout << "Primeiro Teste < 10";
+    cin >> num;
+
+    cout << "Segundo teste < 0";
+    cin >> num;
+
+    cout << "Terceiro teste";
+    cin >> num;
+}

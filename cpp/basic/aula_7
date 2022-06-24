@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+   int n1=0, n2=1;
+
+   /* Incremento e Decremento de valores em Variáveis */
+
+   /* n1 = n1 + 1 */
+
+   /* n1 += 1 */ 
+
+   n2++;
+
+   /* ++ ou -- vai sempre em UMA unidade */ 
+   return 0;
+}
