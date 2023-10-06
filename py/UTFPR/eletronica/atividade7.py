@@ -1,3 +1,5 @@
+# Testar em: https://www.programiz.com/python-programming/online-compiler/
+
 print("Digite a capacitância: \n")
 c = float(input())
 
