@@ -10,7 +10,7 @@ print("====/====/====/====/====/==== \n")
 print("Digite a capacitância (F): \n")
 c = float(input())
 
-print("Digite 1° resitência (Ω): \n")
+print("Digite 1° resistência (Ω): \n")
 ra = float(input())
 
 print("Digite 2° resistência (Ω): \n")
