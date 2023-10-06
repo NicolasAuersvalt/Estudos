@@ -29,6 +29,3 @@ print("O valor da f é: {:.3f}s\n".format(f))
 print("O valor de T é: {:.3f}v\n".format(t))
 
 print("O valor de D é: {:.3f}% \n".format(d))
-
-print("Digite BÃO: \n")
-bao = (input())
