@@ -1,5 +1,11 @@
 # Testar em: https://www.programiz.com/python-programming/online-compiler/
+print("====/====/====/====/====/==== \n")
+
+print("Calculadorazinha da atividade 7 de eletrônica \n")
+
 print("Atenção nas unidades!\n")
+
+print("====/====/====/====/====/==== \n")
 
 print("Digite a capacitância (F): \n")
 c = float(input())
@@ -19,7 +25,9 @@ t = float(th+tl) #  TESTADO
 
 f = float(1/t) #  TESTADO
 
-d = float(th/t) #  Correto
+d = float(th/t) #  TESTADO
+
+print("====/====/====/====/====/==== \n")
 
 print("O valor do TH é de aproximadamente: {:.3f}s\n".format(th))
 
@@ -30,6 +38,8 @@ print("O valor da f é de aproximadamente: {:.3f}Hz\n".format(f))
 print("O valor de T é de aproximadamente: {:.3f}v\n".format(t))
 
 print("O valor de D é de aproximadamente: {:.3f}% \n".format(d))
+
+print("====/====/====/====/====/==== \n")
 
 print("Digite BÃO para sair: ")
 a = input()
